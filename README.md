@@ -3,6 +3,7 @@
 - headless CMS with API build with Strapi.io and GraphQL
 - [Tutorial Guide Here](https://www.youtube.com/playlist?list=PL4cUxeGkcC9h6OY8_8Oq6JerWqsKdAPxn)
 - ReactJs will basically use API routes to get all data from the Strapi
+- [ReactJS Docs](https://react.dev/learn)
 
 ### Documentation
 
@@ -16,7 +17,7 @@
 - react as a Frontend will have its own directory
 
 
-### Installation
+### Installation Strapi
 
 - make sure that you have nodejs installed
 - install strapi into a folder example `npx create-strapi-app--quickstart` . this will installation sets up Strapi with a SQLite database. more commands and uses at https://docs.strapi.io/dev-docs/installation/cli 
@@ -45,3 +46,20 @@
 - fetch single post http://localhost:1337/api/posts/post-id-check-the-admin-for-this/
 - when Post collection type is created in Admin panel give it a sigular name, strapi will create plurar form so we can have many posts in Post Collection type
 - make sure that the settings->Users&Permissins-plugin->Roles option for Public is set for  Post (find and findOne). This will make post visible for public for all posts and single post
+
+### Install ReactJS
+
+- in the root of your project install react in a separate directory by running the below command
+- `npx create-react-app project-name`
+- start the react by cd into the project directory and run below commands
+- if error shows as conflict between  eslint-config-react-app, make sure that you have cd into project will correct uppercase/lowercase combination. This seems to be a Windows problem thus conflict shows up. Check and cd again and then run `npm start` again. Error should be gone now
+  - `npm start`
+    Starts the development server.
+
+  - `npm run build`
+    Bundles the app into static files for production.
+
+  - `npm test`
+    Starts the test runner.
+
+- install React Router package `npm install react-router-dom` . this gives Reactjs option to use router for differents urls. See the main header file build for this at `react-frontend\src\components\SiteHeader.js`
