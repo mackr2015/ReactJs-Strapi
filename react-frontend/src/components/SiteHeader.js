@@ -1,12 +1,12 @@
 import React from 'react'
-import { BrowserRouter, Link } from 'react-router-dom'
+
+import Navigation from "./Navigation";
 
 const SiteHeader = () => {
   return (
     <div className="siteHeader">
-        <BrowserRouter>
-            <Link to="/">Homepage Link</Link>
-        </BrowserRouter>
+        <Navigation />
+        
     </div>
   )
 }
