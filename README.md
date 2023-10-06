@@ -32,6 +32,7 @@
   Display all available commands.
 - by default strapi will start the local development with port 1337 and will install admin panel
 - to change the port edit `project-name/.env` and `project-name/config/server.js` but we need to cover this when we come to deployment. Lets cover this as separate tutorial
+- after testing the content I found that the content has options like MarkDown short and long text. Markdown turn out to be the best option. In order to render this on the frontend install package `npm install react-markdow` and use it in the React component like `import ReactMarkDown from "react-markdown"`
 
 ### Admin Panel
 
