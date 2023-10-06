@@ -36,3 +36,12 @@
 
 - creating a post and defining the fields
 - example `post` created is present in the `project-name/src/api/name-of-the-post` , in our case it's `post`
+- [creating custom API endpoint docs](https://strapi.io/blog/how-to-create-a-custom-api-endpoint-in-strapi)
+
+### Test the API endpoint with PostMan
+
+- newly created Post collection type can be checked in POstMan via GET request and endpoint 
+- fetch all posts http://localhost:1337/api/posts/ 
+- fetch single post http://localhost:1337/api/posts/post-id-check-the-admin-for-this/
+- when Post collection type is created in Admin panel give it a sigular name, strapi will create plurar form so we can have many posts in Post Collection type
+- make sure that the settings->Users&Permissins-plugin->Roles option for Public is set for  Post (find and findOne). This will make post visible for public for all posts and single post
