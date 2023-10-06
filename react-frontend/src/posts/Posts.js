@@ -1,35 +1,25 @@
 import React from 'react'
-
+import ReactMarkDown from "react-markdown"
+import ReactDom from "react-dom"
 import useFetch from '../hooks/useFetch'
 
-const Posts = () => {
 
-  const { loading, error, data } = useFetch('http://localhost:1337/api/posts');
+const Posts = () => {
+  const postsUrl = 'http://localhost:1337/api/posts';
+  const { loading, error, data } = useFetch(postsUrl);
 
   if (loading) return <p>Loading...</p>
   if (error) return <p>Error fetching API data</p>
 
-  // console.log(data.data[0].attributes);
-  // console.log(typeof(data.data));
-  // let posts = {};
-  // for (let post in data.data){
-  //   // console.log(post);
-  //   // console.log(data.data[post].attributes);
-  //   posts = data.data;
-  // }
-  console.log(data);
-  // console.log(posts);
   return (
     <div className="posts">
-
-      {/* {data.map(post => ( */}
-        {/* // <div key={post.id} className="posts-card">
-        //   <h2>{post.title}</h2>
-        //   <p>
-        //     {post.body.substring(0, 180)}...
-        //   </p>
-        // </div>  */}
-      {/* ))} */}
+      {Object.keys(data.data).map(index => (
+        
+        <div key="{data.data[index].id}" className="post-card">
+          <h2>{data.data[index].attributes.title}</h2>
+          <ReactMarkDown>{data.data[index].attributes.postContent}</ReactMarkDown>
+        </div>
+      ))}
      
     </div>
   )
