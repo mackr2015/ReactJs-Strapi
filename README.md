@@ -1,7 +1,8 @@
-## ReactJS with Strapi 
+## ReactJS with Strapi and GraphQL 
 
-- headless CMS with API build in
-
+- headless CMS with API build with Strapi.io and GraphQL
+- [Tutorial Guide Here](https://www.youtube.com/playlist?list=PL4cUxeGkcC9h6OY8_8Oq6JerWqsKdAPxn)
+- ReactJs will basically use API routes to get all data from the Strapi
 
 ### Documentation
 
