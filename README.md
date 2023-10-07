@@ -35,6 +35,7 @@
 - after testing the content I found that the content has options like MarkDown short and long text. Markdown turn out to be the best option. In order to render this on the frontend install package `npm install react-markdow` and use it in the React component like `import ReactMarkDown from "react-markdown"`
 - strapi end point to get images associated with the posts use this `http://localhost:1337/api/posts?populate=*`
 - database export [read here](https://docs.strapi.io/dev-docs/data-management/export)
+- import db to strapi [read docs](https://docs.strapi.io/dev-docs/data-management/import#:~:text=To%20import%20data%20into%20a,extension%2C%20and%20path%20are%20required.) . run command `npm run strapi import -- -f export_20221213105643.tar.gz.enc`
 - install GraphQL in strapi by running this command `npm install @strapi/plugin-graphql`
 
 ### Admin Panel
