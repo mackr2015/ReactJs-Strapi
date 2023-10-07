@@ -1,4 +1,4 @@
-## ReactJS with Strapi and GraphQL 
+## ReactJS with Strapi and GraphQL
 
 - headless CMS with API build with Strapi.io and GraphQL
 - [Tutorial Guide Here](https://www.youtube.com/playlist?list=PL4cUxeGkcC9h6OY8_8Oq6JerWqsKdAPxn)
@@ -20,7 +20,7 @@
 ### Installation Strapi
 
 - make sure that you have nodejs installed
-- install strapi into a folder example `npx create-strapi-app--quickstart` . this will installation sets up Strapi with a SQLite database. more commands and uses at https://docs.strapi.io/dev-docs/installation/cli 
+- install strapi into a folder example `npx create-strapi-app--quickstart` . this will installation sets up Strapi with a SQLite database. more commands and uses at https://docs.strapi.io/dev-docs/installation/cli
 - strapi commands:
     - `npm run develop`
   Start Strapi in watch mode. (Changes in Strapi project files will trigger a server restart)
@@ -33,6 +33,9 @@
 - by default strapi will start the local development with port 1337 and will install admin panel
 - to change the port edit `project-name/.env` and `project-name/config/server.js` but we need to cover this when we come to deployment. Lets cover this as separate tutorial
 - after testing the content I found that the content has options like MarkDown short and long text. Markdown turn out to be the best option. In order to render this on the frontend install package `npm install react-markdow` and use it in the React component like `import ReactMarkDown from "react-markdown"`
+- strapi end point to get images associated with the posts use this `http://localhost:1337/api/posts?populate=*`
+- database export [read here](https://docs.strapi.io/dev-docs/data-management/export)
+- install GraphQL in strapi by running this command `npm install @strapi/plugin-graphql`
 
 ### Admin Panel
 
@@ -42,8 +45,8 @@
 
 ### Test the API endpoint with PostMan
 
-- newly created Post collection type can be checked in POstMan via GET request and endpoint 
-- fetch all posts http://localhost:1337/api/posts/ 
+- newly created Post collection type can be checked in POstMan via GET request and endpoint
+- fetch all posts http://localhost:1337/api/posts/
 - fetch single post http://localhost:1337/api/posts/post-id-check-the-admin-for-this/
 - when Post collection type is created in Admin panel give it a sigular name, strapi will create plurar form so we can have many posts in Post Collection type
 - make sure that the settings->Users&Permissins-plugin->Roles option for Public is set for  Post (find and findOne). This will make post visible for public for all posts and single post

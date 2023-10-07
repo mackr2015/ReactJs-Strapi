@@ -6,14 +6,16 @@ const Navigation = () => {
     <div className="navbar">
         <div className="nav">
             <ul>
-                <BrowserRouter>
+              <BrowserRouter>
                 <li><Link to="/">Home</Link></li>
-                    <li><Link to="/posts">Posts</Link></li>
-                </BrowserRouter>
+
+                <li><Link to="/posts">Posts</Link></li>
+
+              </BrowserRouter>
             </ul>
-            
+
         </div>
-        
+
     </div>
   )
 }

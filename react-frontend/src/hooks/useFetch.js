@@ -8,12 +8,13 @@ const useFetch = (url) => {
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true)
-      
+
       try {
         const res = await fetch(url)
         const json = await res.json()
 
-        setData(json);
+
+        setData(json.data);
         setLoading(false)
       } catch (error) {
         setError(error)
@@ -22,7 +23,7 @@ const useFetch = (url) => {
     }
 
     fetchData();
-  }, [url])
+  }, [])
 
   return { loading, error, data }
 }

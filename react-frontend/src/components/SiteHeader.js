@@ -6,7 +6,6 @@ const SiteHeader = () => {
   return (
     <div className="siteHeader">
         <Navigation />
-        
     </div>
   )
 }
